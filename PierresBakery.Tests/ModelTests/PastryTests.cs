@@ -13,5 +13,13 @@ namespace PierresBakery.Tests
       float result = pastry.Order(2);
       Assert.AreEqual(4, result);
     }
+
+    [TestMethod]
+    public void Order_GetOrderPrice_10()
+    {
+      Pastry pastry = new Pastry();
+      float result = pastry.Order(6);
+      Assert.AreEqual(10, result);
+    }
   }
 }
