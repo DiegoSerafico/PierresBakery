@@ -10,7 +10,7 @@ namespace PierresBakery
     public int Order(int amount)
     {
       int total = 0;
-      // total = amount * Price;
+      total = amount * Price;
       return total;
     }
   }
