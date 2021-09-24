@@ -1,11 +1,17 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using ProjectName;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PierresBakery;
 
-// namespace ProjectName.Tests
-// {
-//   [TestClass]
-//   public class ClassNameTests
-//   {
-//     // Test methods go here
-//   }
-// }
+namespace PierresBakery.Tests
+{
+  [TestClass]
+  public class BreadTests
+  {
+    [TestMethod]
+    public void Order_GetOrderPrice_10()
+    {
+      Bread bread = new Bread();
+      int result = bread.Order(2);
+      Assert.AreEqual(10, result);
+    }
+  }
+}
