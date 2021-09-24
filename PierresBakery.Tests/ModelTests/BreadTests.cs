@@ -10,8 +10,16 @@ namespace PierresBakery.Tests
     public void Order_GetOrderPrice_10()
     {
       Bread bread = new Bread();
-      int result = bread.Order(2);
+      float result = bread.Order(2);
       Assert.AreEqual(10, result);
+    }
+
+    [TestMethod]
+    public void Order_GetOrderPrice_20()
+    {
+      Bread bread = new Bread();
+      float result = bread.Order(6);
+      Assert.AreEqual(20, result);
     }
   }
 }
