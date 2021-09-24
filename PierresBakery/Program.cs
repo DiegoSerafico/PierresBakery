@@ -20,23 +20,29 @@ namespace PierresBakery
       );
       Console.WriteLine("Would you like to make an order?");
       string willOrder = Console.ReadLine();
-      if (willOrder.ToLower() == "yes")
+      Bread bread = new Bread();
+      Pastry pastry = new Pastry();
+      float breadTotal = 0;
+      float pastryTotal = 0;
+      int breadAmount = 0;
+      int pastryAmount = 0;
+      while (willOrder.ToLower() == "yes")
       {
-        Bread bread = new Bread();
-        Pastry pastry = new Pastry();
         Console.WriteLine("How many loaves of bread would you like?");
-        int breadAmount = Convert.ToInt32(Console.ReadLine());
+        breadAmount += Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("How many pastries would you like?");
-        int pastryAmount = Convert.ToInt32(Console.ReadLine());
-        float breadTotal = bread.Order(breadAmount);
-        float pastryTotal = pastry.Order(pastryAmount);
-        float orderTotal = breadTotal + pastryTotal;
-        Console.WriteLine(
-          "Bread Total: $" + breadTotal + "\n" + 
-          "Pastry Total: $" + pastryTotal + "\n" + 
-          "Order Total: $" + orderTotal 
-          );
+        pastryAmount += Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Would you like to add to your order?");
+        willOrder = Console.ReadLine();
       }
+      breadTotal += bread.Order(breadAmount);
+      pastryTotal += pastry.Order(pastryAmount);
+      float orderTotal = breadTotal + pastryTotal;
+      Console.WriteLine(
+        "Bread Total: $" + breadTotal + "\n" + 
+        "Pastry Total: $" + pastryTotal + "\n" + 
+        "Order Total: $" + orderTotal 
+      );
     }
   }
 }
