@@ -1,11 +1,17 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using ProjectName;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PierresBakery;
 
-// namespace ProjectName.Tests
-// {
-//   [TestClass]
-//   public class ClassNameTests
-//   {
-    
-//   }
-// }
+namespace PierresBakery.Tests
+{
+  [TestClass]
+  public class PastryTests
+  {
+    [TestMethod]
+    public void Order_GetOrderPrice_4()
+    {
+      Pastry pastry = new Pastry();
+      float result = pastry.Order(2);
+      Assert.AreEqual(4, result);
+    }
+  }
+}
