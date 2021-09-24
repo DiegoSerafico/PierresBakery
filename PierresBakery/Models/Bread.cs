@@ -11,13 +11,13 @@ namespace PierresBakery
     public float Order(int amount)
     {
       float total = (float) amount * Price;
-      // for (int count = 1; count <= amount; count++)
-      // {
-      //   if (count % 3 == 0)
-      //   {
-      //     total -= Price * Discount;
-      //   }
-      // }
+      for (int count = 1; count <= amount; count++)
+      {
+        if (count % 3 == 0)
+        {
+          total -= Price * Discount;
+        }
+      }
       return total;
     }
   }
