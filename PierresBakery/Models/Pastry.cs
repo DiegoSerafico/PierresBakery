@@ -7,7 +7,7 @@ namespace PierresBakery
 
     public float Order(int amount)
     {
-      float total = (float) amount * 10;
+      float total = (float) amount * Price;
       return total;
     }
   }
