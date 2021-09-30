@@ -19,8 +19,11 @@ _This application let's you make and order of bread and pastries and returns the
 * _Navigate to the tests directory of the repository_
 * _Type dotnet restore_
 * _Navigate to the non tests bakery repository_
+* _Type dotnet build_
 * _Type dotnet run_
 * _Answer the questions in the console_
+* _To test the methods and constructors navigate to tests diretory_
+* _Type dotnet test and the results should appear_
 
 ## Known Bugs
 
