@@ -5,17 +5,17 @@ namespace PierresBakery
 {
   public class Bread
   {
-    public float Price = 5;
-    public float Discount = 1;
+    public static float Price { get; set; } = 5;
+    public static float Discount { get; } = 1;
 
     public float Order(int amount)
     {
-      float total = (float) amount * Price;
+      float total = (float) amount * Bread.Price;
       for (int count = 1; count <= amount; count++)
       {
         if (count % 3 == 0)
         {
-          total -= Price * Discount;
+          total -= Bread.Price * Bread.Discount;
         }
       }
       return total;

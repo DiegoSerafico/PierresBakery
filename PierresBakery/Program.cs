@@ -11,8 +11,8 @@ namespace PierresBakery
       Console.WriteLine("Welcome to Pierre's Bakery");
       Console.WriteLine(
         "The Prices are:\n" + 
-        "Bread: $5\n" + 
-        "Pastry: $2\n" + 
+        "Bread: $" + Bread.Price + "\n" +
+        "Pastry: $"+ Pastry.Price + "\n" + 
         "\n" +
         "Current Discounts:\n" + 
         "Buy two get one free on bread.\n" + 
@@ -43,7 +43,12 @@ namespace PierresBakery
         "Pastry Total: $" + pastryTotal + "\n" + 
         "Order Total: $" + orderTotal + "\n"
       );
-      Console.WriteLine("Thank you for shopping at Pierre's Bakery. Have a wonderful day!");
+      Console.WriteLine("Thank you for shopping at Pierre's Bakery. Place another order?");
+      if (Console.ReadLine() == "yes") {
+        Main();
+      } else {
+        Console.WriteLine("Have a Wonderful day!");
+      }
     }
   }
 }
